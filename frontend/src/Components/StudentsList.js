@@ -77,7 +77,7 @@ const StudentsList = () => {
     <div className="studentsList">
         <Button type = "primary" onClick={() => navigate("/signup")}>ADD USER</Button>
 
-        <h1>STUDENTS LIST</h1>
+        <h1>STUDENTS LIST ADDED TO TEST IN GIT </h1>
 
         {/*<Table dataSource = {studs} columns = {columns} name = "antd" rowKey = "id" />*/}
 
