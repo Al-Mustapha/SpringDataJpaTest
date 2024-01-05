@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="apping">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+    <script>
+        var app = angular.module('demo', [])
+
+        app.controller("WelcomeController", function($scope, $http) {
+            // $scope.greeting = 'Wedone!';
+
+            $scope.customerForm = {
+                name:"",
+                department:"",
+                guardianname:"",
+                guardianemail:"",
+                guardianphone:""
+            };
+
+
+            $scope.addStudent = function (){
+                const method = "POST";
+                const url = "/saveStudent";
+
+                $http({
+                    method : method,
+                    url : url,
+                    data : angular.toJson($scope.customerForm),
+                    headers : {
+                        'Content-Type' : 'application/json'
+                    }
+                }).then("Good to go", "Oops" );
+            }
+        });
+
+
+        angular.bootstrap(document, ['demo']);
+    </script>
+
+
+</head>
+<body ng-app="demo" ng-controller="WelcomeController">
+
+<div style="text-align: center">
+
+    <form ng-submit="addStudent()">
+        <br></br>
+        <input type="text" name="name" ng-model="customerForm.name"/><br></br>
+        <input type="text" name="department" ng-model="customerForm.department"/><br></br>
+        <input type="text" name="guardianname" ng-model="customerForm.guardianname"/><br></br>
+        <input type="text" name="guardianemail" ng-model="customerForm.guardianemail"/><br></br>
+        <input type="text" name="guardianphone" ng-model="customerForm.guardianphone"/><br></br>
+        <input type="submit" value="Submit"/>
+
+
+    </form>
+
+
+</div>
+
+
+</body>
+</html>

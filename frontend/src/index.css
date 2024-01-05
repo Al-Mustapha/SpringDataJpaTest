@@ -1,0 +1,59 @@
+/*@import '~antd/dist/antd.css';*/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+input[type="text"] {
+  width: 300px;
+  margin: 10px;
+}
+#sub{
+  width: 120px;
+}
+#log {
+  width: 120px;
+  background-color: black;
+  color: white;
+  margin:10px;
+  border: black;
+}
+
+#sub1{
+  width: 120px;
+  background-color: blue;
+  color: white;
+}
+#log1 {
+  width: 120px;
+  background-color: black;
+  color: white;
+  margin:10px;
+}
+
+h1{
+  color: lightgrey;
+  margin-top: 200px;
+}
+
+.studentsList {
+  align-items: center;
+}
+
+Table[name='antd'] {
+  width: 200px;
+}
+
+label {
+  color: red;
+}
+
+
